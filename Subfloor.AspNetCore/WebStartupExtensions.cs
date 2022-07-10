@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Http;
 using Subfloor.Dtos;
 
-namespace Subfloor.AspNetcore
+namespace Subfloor.AspNetCore
 {
     public static class WebStartupExtensions
     {
