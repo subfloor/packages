@@ -34,8 +34,7 @@ jobs:
           cd ${{ env.PROJECT_PATH }}
           dotnet pack -c Release -o out -p:Version=${{ steps.nbgv.outputs.SemVer2 }}
         
-      - name: Add target registry
-        run: nuget sources add -name ${{ env.PACKAGE_SOURCE_NAME }} -Source https://nuget.pkg.github.com/${{ env.ORGANIZATION_NAME}}/index.json -Username ${{ env.ORGANIZATION_NAME }} -Password ${{ secrets.GITHUB_TOKEN }}
-        
-      - name: Push generated package to GitHub registry
-        run: nuget push .\${{ env.PROJECT_PATH }}\out\*.nupkg -Source ${{ env.PACKAGE_SOURCE_NAME }} -SkipDuplicate
+      - name: Publish
+        if: startsWith(github.ref, 'refs/heads/release')
+        run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
+
