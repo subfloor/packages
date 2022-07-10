@@ -6,6 +6,7 @@
 		<Authors>The Subfloor Group</Authors>
 		<PackageDescription>Core data transfer objects</PackageDescription>
 		<RepositoryUrl>https://github.com/subfloor/packages</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<DebugType>embedded</DebugType>
 	</PropertyGroup>
 </Project>
