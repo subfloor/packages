@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <PackageId>Subfloor.ApiClient</PackageId>
+	  <Authors>The Subfloor Group</Authors>
+	  <PackageDescription>Typed HttpClient client for working with the Subfloor Api</PackageDescription>
+	  <RepositoryUrl>https://github.com/subfloor/packages</RepositoryUrl>
+	  <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Subfloor.Dtos" Version="0.*-*" />
+  </ItemGroup>
+
+</Project>
