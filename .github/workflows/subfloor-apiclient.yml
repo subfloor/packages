@@ -1,0 +1,40 @@
+name: subfloor.apiclient
+
+on:
+  push:
+    # push when any branch is pushed
+    # branches:
+    #  - main
+    paths:
+    - Subfloor.ApiClient/**
+
+  workflow_dispatch:
+  
+env:
+  PROJECT_PATH: Subfloor.ApiClient
+  ORGANIZATION_NAME: Subfloor
+  PACKAGE_SOURCE_NAME: subfloor
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true   #allows execution of nbgv package below
+jobs:
+  build:
+    runs-on: windows-latest
+    name: build and publish to package feed 
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0  # avoid shallow clone
+
+#      - uses: aarnott/nbgv@v0.3
+#        id: nbgv
+          
+      - name: Build solution and generate NuGet package
+        run: |  
+          cd ${{ env.PROJECT_PATH }}
+          dotnet pack -c Release -o out -p:Version=${{ steps.nbgv.outputs.SemVer2 }}
+        
+      - name: Publish
+#        if: startsWith(github.ref, 'refs/heads/release')
+        run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
+
