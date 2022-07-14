@@ -9,4 +9,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<DebugType>embedded</DebugType>
 	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Update="Nerdbank.GitVersioning" Version="3.5.108" />
+	</ItemGroup>
 </Project>
