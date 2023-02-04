@@ -5,11 +5,9 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subfloor.Dtos", "Subfloor.Dtos\Subfloor.Dtos.csproj", "{8B662C3E-294C-4B9F-8ABB-CE2BF9F2A49D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subfloor.AspNetCore", "Subfloor.AspNetCore\Subfloor.AspNetCore.csproj", "{E5344EDB-2621-47AB-840B-05EE0EE3052D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subfloor.ApiClient", "Subfloor.ApiClient\Subfloor.ApiClient.csproj", "{4AF4C185-DB14-46E1-9468-6C46E1CDD291}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subfloor.Data", "Subfloor.Data\Subfloor.Data.csproj", "{62089745-14D5-41CF-8D96-A2FC4B632BFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subfloor.Data", "Subfloor.Data\Subfloor.Data.csproj", "{62089745-14D5-41CF-8D96-A2FC4B632BFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{8B662C3E-294C-4B9F-8ABB-CE2BF9F2A49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B662C3E-294C-4B9F-8ABB-CE2BF9F2A49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B662C3E-294C-4B9F-8ABB-CE2BF9F2A49D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5344EDB-2621-47AB-840B-05EE0EE3052D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5344EDB-2621-47AB-840B-05EE0EE3052D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5344EDB-2621-47AB-840B-05EE0EE3052D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5344EDB-2621-47AB-840B-05EE0EE3052D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4AF4C185-DB14-46E1-9468-6C46E1CDD291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4AF4C185-DB14-46E1-9468-6C46E1CDD291}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AF4C185-DB14-46E1-9468-6C46E1CDD291}.Release|Any CPU.ActiveCfg = Release|Any CPU
